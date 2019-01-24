@@ -1,6 +1,5 @@
-version: 2.0
-
 jobs:
+  version: 2
   build:
     docker:
       - image: python
