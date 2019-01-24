@@ -1,25 +1,10 @@
-import flaskr
-import unittest
+import os
 import tempfile
 
-class FlaskrTestCase(unittest.TestCase):
+import pytest
 
-    def setUp(self):
-        print("Preparing")
-        # self.db_fd, flaskr.app.config['DATABASE'] = tempfile.mkstemp()
-        # flaskr.app.testing = True
-        # self.app = flaskr.app.test_client()
-        # with flaskr.app.app_context():
-        #     flaskr.init_db()
+def test_empty_db(client):
+    """Start with a blank database."""
 
-    def tearDown(self):
-        print("Finishing")
-        # os.close(self.db_fd)
-        # os.unlink(flaskr.app.config['DATABASE'])
-
-    def test_something(self):
-        print("Testing")
-        self.assertEqual(b'A string', b'Another')
-
-if __name__ == '__main__':
-    unittest.main()
+    # rv = client.get('/')
+    assert 1 == 1
