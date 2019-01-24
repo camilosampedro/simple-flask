@@ -3,7 +3,7 @@ import tempfile
 
 import pytest
 
-def test_empty_db(client):
+def test_empty_db():
     """Start with a blank database."""
 
     # rv = client.get('/')
