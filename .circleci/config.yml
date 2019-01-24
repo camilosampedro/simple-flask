@@ -10,7 +10,7 @@ jobs:
       - run: pip install -r requirements.txt
 
       # Database setup
-      - run: python test
+      - run: python test.py
 
   deploy:
     docker:
@@ -31,4 +31,4 @@ workflows:
             - build
           filters:
             branches:
-              only: sequential-branch-filter
+              only: master
